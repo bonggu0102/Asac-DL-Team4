@@ -4,7 +4,7 @@
 
 ASAC 빅데이터 분석 11기 · 딥러닝 4조(5인) · 2026.07
 
-![3D 복원 결과](docs/reconstruction.jpg)
+![3D 복원 결과](03_Docs/reconstruction.jpg)
 
 ## 배경
 
@@ -32,11 +32,11 @@ ASAC 빅데이터 분석 11기 · 딥러닝 4조(5인) · 2026.07
 
 | Before | After |
 |---|---|
-| ![복원 직후](docs/furniture_before.jpg) | ![가구 배치](docs/furniture_after.jpg) |
+| ![복원 직후](03_Docs/furniture_before.jpg) | ![가구 배치](03_Docs/furniture_after.jpg) |
 
 뷰어에서 옵션 가구를 토글로 지우고 가구 라이브러리에서 원하는 가구를 배치.
 
-![뷰어 화면](docs/viewer.jpg)
+![뷰어 화면](03_Docs/viewer.jpg)
 
 ## 복원 모델 선정
 
