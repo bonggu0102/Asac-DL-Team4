@@ -6,8 +6,6 @@
 02_Data/**
 !02_Data/**/.gitkeep
 
-03_Docs/**
-!03_Docs/**/.gitkeep
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
