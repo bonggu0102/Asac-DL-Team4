@@ -161,7 +161,7 @@ DATA_ROOT = Path("/content/drive/MyDrive/0_ASAC_11기_DL_4조/02_Data")
 
 ## 팀 구성 및 역할
 
-ASAC 빅데이터 분석 11기 딥러닝 4조, 2026.07
+ASAC 빅데이터 분석가 11기 딥러닝 4조, 2026.07
 
 | 팀원 | 담당 |
 |---|---|
