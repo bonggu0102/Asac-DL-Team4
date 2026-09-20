@@ -107,7 +107,7 @@
 | `yolo_tuning_wardbord.ipynb` | 파인튜닝된 YOLO11s의 클래스별 임계값 적용 |
 | `DUst3r_room.ipynb`, `MAst3r_room.ipynb`, `MUst3r_room.ipynb`, `Depth_2.5D_room.ipynb` | 초기 복원 모델 탐색 |
 
-## 데이터 및 실행
+## Colab 실행 및 데이터
 
 본 프로젝트는 Google Colab GPU 환경에서 개발했습니다. 실제 거주 공간 이미지·영상과 모델 가중치는 개인정보 및 파일 용량 문제로 공개하지 않습니다.
 
