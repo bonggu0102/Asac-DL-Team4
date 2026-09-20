@@ -107,46 +107,12 @@
 | `yolo_tuning_wardbord.ipynb` | 파인튜닝된 YOLO11s의 클래스별 임계값 적용 |
 | `DUst3r_room.ipynb`, `MAst3r_room.ipynb`, `MUst3r_room.ipynb`, `Depth_2.5D_room.ipynb` | 초기 복원 모델 탐색 |
 
-## 실행 환경 및 재현 범위
+## 데이터 및 실행
 
-노트북은 Google Colab GPU 환경을 기준으로 작성했습니다. 공개 저장소에는 실제 방 이미지·영상, 학습 가중치, 세그멘테이션 마스크와 가구 GLB가 포함되지 않으므로 clone만으로 최종 파이프라인 전체를 재실행할 수는 없습니다.
+본 프로젝트는 Google Colab GPU 환경에서 개발했습니다. 실제 거주 공간 이미지·영상과 모델 가중치는 개인정보 및 파일 용량 문제로 공개하지 않습니다.
 
-자체 데이터로 실험하려면 Google Drive에 아래 데이터 구조를 준비하고, 각 노트북 설정 셀의 `DATA_ROOT`를 해당 경로로 변경해야 합니다. 최종 편집 파이프라인에는 호환되는 YOLO 가중치, 이미지별 마스크 및 배치용 가구 GLB도 필요합니다.
+따라서 이 저장소는 구현 코드와 실험 결과 열람을 목적으로 하며, 전체 파이프라인 실행에는 별도의 입력 데이터와 모델 가중치가 필요합니다. 자체 데이터를 사용하는 경우 각 노트북의 `DATA_ROOT`를 실제 데이터 경로로 수정해야 합니다.
 
-```python
-DATA_ROOT = Path("/content/drive/MyDrive/0_ASAC_11기_DL_4조/02_Data")
-```
-
-노트북은 셀 순서에 따른 변수 상태를 사용하므로 Drive 마운트와 환경 설정 셀부터 순서대로 실행해야 합니다. 필요한 저장소와 패키지를 설치하는 첫 실행에는 네트워크 연결이 필요하며, DUSt3R·VGGT·SAM2·LaMa·TripoSR 추론은 GPU 메모리와 입력 장수에 따라 시간이 오래 걸릴 수 있습니다.
-## 데이터 구조
-
-```text
-0_ASAC_11기_DL_4조/
-└─ 02_Data/
-   ├─ raw_room/
-   │  ├─ room01/ ... room06/
-   │  ├─ room01_empty/
-   │  └─ room06_empty/
-   ├─ raw_video/
-   │  ├─ room.mov                 # room06 최종 시연 원본
-   │  └─ sk304_2.mov              # 304호 시연 원본
-   ├─ raw_furniture/
-   ├─ furniture_glb/
-   ├─ pointmap/
-   ├─ final_glb/
-   ├─ room##_seg_labels.npz
-   ├─ room##_seg_labels.json
-   ├─ yolo11s_1074_832_final_20260703.pt
-   └─ yolo11s_train.pt
-```
-
-대용량 데이터와 모델 가중치는 저장소에 포함하지 않습니다. 데이터가 없는 사용자는 노트북에 저장된 실행 과정과 결과는 볼 수 있지만 전체 파이프라인을 재실행할 수는 없습니다. 자세한 구조는 `02_Data/README.md`를 참고하세요.
-
-## 공개 범위
-
-- `raw_room`과 `raw_video`에는 실제 공간 구조와 개인 물품이 포함될 수 있어 비공개로 유지합니다.
-- 60~300MB의 대용량 HTML 뷰어와 GLB·Point Map도 저장소에 포함하지 않습니다.
-- README에는 결과를 설명하는 저용량 이미지와 코드·데이터 구조만 제공합니다.
 
 ## 한계
 
