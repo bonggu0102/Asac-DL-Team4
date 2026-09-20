@@ -107,21 +107,17 @@
 | `yolo_tuning_wardbord.ipynb` | 파인튜닝된 YOLO11s의 클래스별 임계값 적용 |
 | `DUst3r_room.ipynb`, `MAst3r_room.ipynb`, `MUst3r_room.ipynb`, `Depth_2.5D_room.ipynb` | 초기 복원 모델 탐색 |
 
-## 실행 방법
+## 실행 환경 및 재현 범위
 
-노트북은 Google Colab GPU 환경을 기준으로 작성했습니다.
+노트북은 Google Colab GPU 환경을 기준으로 작성했습니다. 공개 저장소에는 실제 방 이미지·영상, 학습 가중치, 세그멘테이션 마스크와 가구 GLB가 포함되지 않으므로 clone만으로 최종 파이프라인 전체를 재실행할 수는 없습니다.
 
-1. 저장소를 clone하거나 원하는 `.ipynb` 파일을 Colab에서 엽니다.
-2. 공유받은 `0_ASAC_11기_DL_4조` 폴더를 Google Drive의 **내 드라이브**에 바로가기로 추가합니다.
-3. 폴더 이름을 유지한 뒤 Drive 마운트 셀부터 순서대로 실행합니다.
-4. 다른 위치를 사용하면 설정 셀의 `DATA_ROOT`만 실제 경로로 변경합니다.
+자체 데이터로 실험하려면 Google Drive에 아래 데이터 구조를 준비하고, 각 노트북 설정 셀의 `DATA_ROOT`를 해당 경로로 변경해야 합니다. 최종 편집 파이프라인에는 호환되는 YOLO 가중치, 이미지별 마스크 및 배치용 가구 GLB도 필요합니다.
 
 ```python
 DATA_ROOT = Path("/content/drive/MyDrive/0_ASAC_11기_DL_4조/02_Data")
 ```
 
-노트북마다 필요한 저장소와 패키지를 설치하므로 첫 실행에는 네트워크 연결이 필요합니다. DUSt3R·VGGT·SAM2·LaMa·TripoSR 추론은 GPU 메모리와 입력 장수에 따라 시간이 오래 걸릴 수 있습니다.
-
+노트북은 셀 순서에 따른 변수 상태를 사용하므로 Drive 마운트와 환경 설정 셀부터 순서대로 실행해야 합니다. 필요한 저장소와 패키지를 설치하는 첫 실행에는 네트워크 연결이 필요하며, DUSt3R·VGGT·SAM2·LaMa·TripoSR 추론은 GPU 메모리와 입력 장수에 따라 시간이 오래 걸릴 수 있습니다.
 ## 데이터 구조
 
 ```text
